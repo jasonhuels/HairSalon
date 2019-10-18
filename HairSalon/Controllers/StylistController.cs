@@ -3,6 +3,7 @@ using HairSalon.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 
 namespace HairSalon.Controllers
@@ -64,6 +65,18 @@ namespace HairSalon.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             var stylist = _db.Stylists.FirstOrDefault(stylists => stylists.StylistID == id);
+            Console.WriteLine(stylist.Clients.Count);
+
+            foreach(Client client in _db.Clients)
+            {
+                Client thisClient = _db.Clients.FirstOrDefault(clients => clients.StylistID == id);
+                if(thisClient != null)
+                {
+                _db.Clients.Remove(thisClient);
+                _db.SaveChanges();
+
+                }
+            }
             _db.Stylists.Remove(stylist);
             _db.SaveChanges();
             return RedirectToAction("Index");
