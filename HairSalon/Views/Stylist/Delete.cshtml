@@ -1,12 +1,9 @@
 @model HairSalon.Models.Stylist
 
 <h2>Remove Stylist</h2>
-<!-- <div class="nav-bar">
-    @Html.ActionLink("Back to List", "Index")
-</div> -->
 
-@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
+<h2>@Html.DisplayFor(model => model.Name)</h2>
 @using (Html.BeginForm())
 {
-    <input type="submit" value="Delete" />
+    <input type="submit" value="Delete" class="btn"/>
 }

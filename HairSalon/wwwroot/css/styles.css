@@ -82,4 +82,13 @@ p a:hover:not(.active) {
 .btn
 {
   background-color: orchid;
+  margin-top: 20px;
+}
+
+#salon-img
+{
+  margin: 0 auto 0 auto;
+  display: block;
+  border: 5px solid darkmagenta;
+  border-radius: 25px;
 }

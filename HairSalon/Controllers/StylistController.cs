@@ -19,7 +19,7 @@ namespace HairSalon.Controllers
 
         public ActionResult Index()
         {
-            List<Stylist> model = _db.Stylists.ToList();
+            List<Stylist> model = _db.Stylists.OrderBy(s => s.Name).ToList();
             return View(model);
         }
 
@@ -65,16 +65,13 @@ namespace HairSalon.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             var stylist = _db.Stylists.FirstOrDefault(stylists => stylists.StylistID == id);
-            Console.WriteLine(stylist.Clients.Count);
 
             foreach(Client client in _db.Clients)
             {
                 Client thisClient = _db.Clients.FirstOrDefault(clients => clients.StylistID == id);
                 if(thisClient != null)
                 {
-                _db.Clients.Remove(thisClient);
-                _db.SaveChanges();
-
+                    _db.Clients.Remove(thisClient);
                 }
             }
             _db.Stylists.Remove(stylist);
