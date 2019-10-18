@@ -8,10 +8,10 @@
     <h3>No stylists have been added yet!</h3>
 } 
 
+
 @foreach (Stylist stylist in Model)
 {
-    <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistID })</li>
-}
+     string specialty = stylist.Specialty != null ? $"Master of {stylist.Specialty}" : ""; 
 
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
-<p>@Html.ActionLink("Add new stylist", "Create")</p>
+    <li>@Html.ActionLink($"{stylist.Name}: {specialty}", "Details", new { id = stylist.StylistID })</li>
+}

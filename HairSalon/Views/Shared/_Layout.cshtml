@@ -5,6 +5,13 @@
     <title>Eau Claire's Salon</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
     <link rel="stylesheet" href="~/css/styles.css">
+    <div class="nav-bar">
+    <p>@Html.ActionLink("Home", "Index", "Home")</p>
+    <p>@Html.ActionLink("See all Stylists", "Index", "Stylist")</p>
+    <p>@Html.ActionLink("Add new stylist", "Create", "Stylist")</p>
+    <p>@Html.ActionLink("See all Clients", "Index", "Client")</p>
+    <p>@Html.ActionLink("Add new client", "Create", "Client")</p>
+</div>
     
   </head>
   <body>

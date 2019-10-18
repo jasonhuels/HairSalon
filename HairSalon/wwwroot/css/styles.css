@@ -1,0 +1,85 @@
+﻿body
+{
+  background-color: blanchedalmond;
+  height: 100%;
+  position: relative;
+}
+
+h1, h2
+{
+  font-family: cursive;
+  text-align: center;
+  text-shadow: 2px 2px white;
+  font-style: italic;
+}
+
+select.form-control
+{
+  width: 20%; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a
+{
+  font-size: 20px;
+  color: black;
+  text-decoration: underline;
+}
+
+.center
+{
+  text-align: center;
+}
+
+form
+{
+  text-align: center;
+}
+
+.well
+{
+  border: 5px solid black;
+  border-radius: 350px;
+  background-color: lightpink;
+}
+
+li
+{
+  font-size: 20px;
+  padding: 0 0 0 0;
+}
+
+.nav-bar {
+  border-radius: 50px;
+  display: block;
+  margin: 0% auto 0% auto;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  width: 70%;
+  text-align: center;
+}
+
+.nav-bar p {
+  margin: 0 auto 0 auto;
+  display: inline-block;
+  text-align: center;
+}
+
+.nav-bar p a{
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+p a:hover:not(.active) {
+  background-color: rgb(230, 101, 204);
+}
+
+.btn
+{
+  background-color: orchid;
+}

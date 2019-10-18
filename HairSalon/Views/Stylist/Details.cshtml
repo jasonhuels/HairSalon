@@ -3,7 +3,8 @@
 @model HairSalon.Models.Stylist 
 
 <h2>Stylist Details</h2>
-<hr />
+<button class="btn">@Html.ActionLink("Update stylist details", "Edit", new { id = Model.StylistID })</button>
+<button class="btn">@Html.ActionLink("Remove stylist", "Delete", new { id = Model.StylistID })</button>
 
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 <h3>@Html.DisplayNameFor(model => model.Specialty): @Html.DisplayFor(model => model.Specialty)</h3>
@@ -15,10 +16,5 @@
 
 @foreach (Client client in Model.Clients)
 {
-    <li>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientID })</li>
+    <li>@Html.ActionLink($"{client.Name}", "Details", "Client", new { id = client.ClientID })</li>
 }
-
-<p>@Html.ActionLink("Back to list", "Index")</p>
-<p>@Html.ActionLink("Add new client", "Create", "Client")</p>
-<p>@Html.ActionLink("Update stylist details", "Edit", new { id = Model.StylistID })</p>
-<p>@Html.ActionLink("Remove stylist", "Delete", new { id = Model.StylistID })</p>
