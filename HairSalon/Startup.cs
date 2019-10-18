@@ -44,7 +44,7 @@ namespace HairSalon
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Not enough rats!");
+                await context.Response.WriteAsync("Something went wrong.");
             });
 
         }

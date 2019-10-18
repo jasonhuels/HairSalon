@@ -1,0 +1,16 @@
+@using HairSalon.Models;
+
+@model HairSalon.Models.Client
+<h4>Add a new client</h4>
+<div class="well">
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+    @Html.LabelFor(model => model.StylistID)
+    @* @Html.DropDownList("StylistID") *@
+    @Html.DropDownListFor(model => model.StylistID, null, "Select Stylist", new { @class = "form-control", required = "required" })
+    <input type="submit" value="Add new client" />
+}
+<p>@Html.ActionLink("See all clients", "Index")</p>
+</div>

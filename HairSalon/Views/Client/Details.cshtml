@@ -1,0 +1,10 @@
+@model HairSalon.Models.Client
+
+<h2>Client's Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<h3>@Html.DisplayNameFor(model => model.Stylist): @Html.DisplayFor(model => model.Stylist.Name)</h3>
+
+<p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Update client", "Edit", new { id = Model.ClientID })</p>
+<p>@Html.ActionLink("Delete client", "Delete", new { id = Model.ClientID })</p>
