@@ -1,4 +1,4 @@
-# _Change Maker_
+# _Hair Salon_
 
 #### _A C# web application for a salon , 18-October-2019_
 
